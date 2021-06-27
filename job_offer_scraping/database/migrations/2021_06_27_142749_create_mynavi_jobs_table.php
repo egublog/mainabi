@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMynaviUrlsTable extends Migration
+class CreateMynaviJobsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class CreateMynaviUrlsTable extends Migration
      */
     public function up()
     {
-        Schema::create('mynavi_urls', function (Blueprint $table) {
+        Schema::create('mynavi_jobs', function (Blueprint $table) {
             $table->id();
             $table->string('url');
+            $table->string('title');
+            $table->string('company_name');
+            $table->text('features');
             $table->timestamps();
         });
     }
@@ -27,6 +30,6 @@ class CreateMynaviUrlsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mynavi_urls');
+        Schema::dropIfExists('mynavi_jobs');
     }
 }
