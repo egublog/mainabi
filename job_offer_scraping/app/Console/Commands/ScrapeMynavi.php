@@ -25,7 +25,7 @@ class ScrapeMynavi extends Command
      *
      * @var string
      */
-    protected $description = 'Screape Mynavi';
+    protected $description = 'Scrape Mynavi';
 
     /**
      * Create a new command instance.
